@@ -1,3 +1,4 @@
-## Repositorio para Curso JavaScript de Coderhouse
+## Curso JavaScript Coderhouse
 
-[Sitio web](https://istvian.github.io/Javascript/)
+### Desafios
+#### Puedes revisarlos en este  [link](https://istvian.github.io/Javascript/)
