@@ -1,46 +1,75 @@
-@import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Baloo 2', cursive; }
+
+html {
+  height: fit-content;
+  font-size: 10px; }
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  overflow-anchor: none;
+  font-size: 10px; }
+
 .body {
-    background: #111;
-    font-family: 'Oxygen', sans-serif;
+  background: #111;
+  display: flex;
+  flex-flow: column wrap;
+  margin: auto;
+  justify-content: center;
+  align-items: center; }
+  .body .nav {
     display: flex;
     flex-flow: column wrap;
-    margin: auto;
     justify-content: center;
     align-items: center;
-    font-size: 10px;
-}
-
-.body .nav {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: baseline;
     max-width: 50%;
     width: 800px;
-    background: #222;
+    background: #2c2c2c;
     padding: 2rem;
-}
-
-.body .nav .nav__title {
-    color: #fff;
-    font-size: 2rem;
-}
-
-.body .nav .nav__links {
-    display: inline-block;
-    font-size: 1.2rem;
-    color: #fff;
-    list-style-position: inside;
-    text-align: center;
-}
-
-.body a {
-    font-size: 1rem;
+    margin: 1rem;
+    border-radius: 5px;
+    box-shadow: #19f0c1 0px 0px 15px, #fff 0px 0px 5px; }
+    .body .nav .nav__title {
+      color: #fff;
+      font-size: 3rem;
+      padding: 2rem;
+      text-shadow: #111 2px 2px 2px; }
+    .body .nav .nav__subtitle {
+      color: #fff;
+      font-size: 1.5rem; }
+    .body .nav .nav__links {
+      color: #fff;
+      text-align: center;
+      list-style: none;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem; }
+    .body .nav .nav__link {
+      color: #fff;
+      background: #111;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-size: 1.5rem;
+      text-align: center;
+      transition: background 0.2s, box-shadow 0.5s; }
+      .body .nav .nav__link:hover {
+        background: #19f0c1;
+        color: #111;
+        box-shadow: #19f0c1 0px 0px 15px, #fff 0px 0px 5px; }
+  .body .text {
+    margin: 10rem 0;
+    font-size: 1.5rem;
     text-align: center;
     color: #fff;
     text-decoration: none;
-}
-
-.body a:hover {
-    color: #f08c19;
-}
+    background: #2c2c2c;
+    padding: 2rem; }

@@ -1,0 +1,20 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Baloo 2', cursive;
+}
+
+html {
+    height: fit-content;
+    font-size: 10px;
+}
+
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    overflow-anchor: none;
+    font-size: 10px;
+}
