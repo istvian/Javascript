@@ -40,10 +40,12 @@ body {
       color: #fff;
       font-size: 3rem;
       padding: 2rem;
-      text-shadow: #111 2px 2px 2px; }
+      text-shadow: #111 2px 2px 2px;
+      text-align: center; }
     .body .nav .nav__subtitle {
       color: #fff;
-      font-size: 1.5rem; }
+      font-size: 1.5rem;
+      text-align: center; }
     .body .nav .nav__links {
       color: #fff;
       text-align: center;
@@ -53,11 +55,12 @@ body {
       justify-content: center;
       align-items: center;
       padding: 1rem; }
+      .body .nav .nav__links li {
+        margin: 2rem 0.5rem; }
     .body .nav .nav__link {
       color: #fff;
       background: #111;
       padding: 1rem;
-      margin: 1rem 0;
       font-size: 1.5rem;
       text-align: center;
       transition: background 0.2s, box-shadow 0.5s; }
