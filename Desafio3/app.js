@@ -8,7 +8,7 @@
      for (let i = 0; i < iteraciones; i++) {
          resultado = previo + actual;
          console.log(`${previo}+${actual}=${resultado}`);
-         output.innerText += `${previo}+${actual}=${parseInt(resultado)}\n`;
+         output.innerText += `${previo}+${actual}=${resultado}\n`;
          previo = actual;
          actual = resultado;
      }
