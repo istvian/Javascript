@@ -1,75 +1,234 @@
-        $color-bg: #111;
-        $color-bg-hover: rgb(110, 110, 110);
-        $color-block: rgb(44, 44, 44);
-        $color-text: #fff;
-        $color-text-hover: rgb(25, 240, 193);
-        @import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
-        @import "reset";
-        .body {
-            background: $color-bg;
+$color-bg: #111;
+$color-bg-hover: rgb(110, 110, 110);
+$color-block: rgb(44, 44, 44);
+$color-text: #fff;
+$color-text-hover: rgb(25, 240, 193);
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+@import "reset";
+form {
+    margin: 2rem 0rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    p {
+        color: $color-text;
+        text-align: center;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    label {
+        color: $color-text;
+        padding: 1rem;
+        font-size: 1.5rem;
+        display: block;
+        text-align: center;
+    }
+    input {
+        text-align: center;
+    }
+}
+
+.body {
+    background: $color-bg;
+    display: flex;
+    flex-flow: column wrap;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    .nav {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 50%;
+        width: 800px;
+        background: $color-block;
+        padding: 2rem;
+        margin: 1rem;
+        border-radius: 5px;
+        box-shadow: $color-text-hover 0px 0px 15px, $color-text 0px 0px 5px;
+        .nav__title {
+            color: $color-text;
+            font-size: 3rem;
+            padding: 2rem;
+            text-shadow: $color-bg 2px 2px 2px;
+            text-align: center;
+        }
+        .nav__subtitle {
+            color: $color-text;
+            font-size: 2rem;
+            text-align: center;
+            margin: 1rem;
+        }
+        .nav__links {
+            color: $color-text;
+            text-align: center;
+            list-style: none;
             display: flex;
-            flex-flow: column wrap;
-            margin: auto;
+            flex-flow: row wrap;
             justify-content: center;
             align-items: center;
-            .nav {
-                display: flex;
-                flex-flow: column wrap;
-                justify-content: center;
-                align-items: center;
-                max-width: 50%;
-                width: 800px;
-                background: $color-block;
-                padding: 2rem;
-                margin: 1rem;
-                border-radius: 5px;
-                box-shadow: $color-text-hover 0px 0px 15px, $color-text 0px 0px 5px;
-                .nav__title {
-                    color: $color-text;
-                    font-size: 3rem;
-                    padding: 2rem;
-                    text-shadow: $color-bg 2px 2px 2px;
-                    text-align: center;
-                }
-                .nav__subtitle {
-                    color: $color-text;
-                    font-size: 1.5rem;
-                    text-align: center;
-                }
-                .nav__links {
-                    color: $color-text;
-                    text-align: center;
-                    list-style: none;
-                    display: flex;
-                    flex-flow: row wrap;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 1rem;
-                    li {
-                        margin: 2rem 0.5rem;
-                    }
-                }
-                .nav__link {
-                    color: $color-text;
-                    background: $color-bg;
-                    padding: 1rem;
-                    font-size: 1.5rem;
-                    text-align: center;
-                    transition: background 0.2s, box-shadow 0.5s;
-                    &:hover {
-                        background: $color-text-hover;
-                        color: $color-bg;
-                        box-shadow: $color-text-hover 0px 0px 15px, $color-text 0px 0px 5px;
-                    }
-                }
-            }
-            .text {
-                margin: 10rem 0;
-                font-size: 1.5rem;
-                text-align: center;
-                color: $color-text;
-                text-decoration: none;
-                background: $color-block;
-                padding: 2rem;
+            padding: 1rem;
+            li {
+                margin: 2rem 0.5rem;
             }
         }
+        .nav__link {
+            color: $color-text;
+            background: $color-bg;
+            padding: 1rem;
+            font-size: 1.5rem;
+            text-align: center;
+            transition: background 0.2s, box-shadow 0.5s;
+            margin: 1rem;
+            &:hover {
+                background: $color-text-hover;
+                color: $color-bg;
+                box-shadow: $color-text-hover 0px 0px 15px, $color-text 0px 0px 5px;
+            }
+        }
+    }
+    .text {
+        margin: 1rem 0;
+        font-size: 1.5rem;
+        text-align: center;
+        color: $color-text;
+        text-decoration: none;
+        background: $color-block;
+        padding: 0.5rem;
+    }
+    .text--red {
+        color: red;
+    }
+    .text--green {
+        color: greenyellow;
+    }
+}
+
+@media (max-width: 500px) {
+    .body {
+        .nav {
+            max-width: 100%;
+            width: fit-content;
+            padding: 0.2rem;
+        }
+    }
+}
+
+.producto-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    .producto {
+        border-radius: 2.5rem;
+        padding: 1rem;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 15rem;
+        margin: 0.5rem;
+        background: white;
+        .producto__img {
+            height: 4rem;
+        }
+        .producto__title {
+            margin-top: 1rem;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        .producto__subtitle {
+            color: black;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        .precio {
+            &::before {
+                content: "$";
+            }
+        }
+    }
+}
+
+.item {
+    display: grid;
+    grid-template-areas: "img title price" " img subtitle subtitle";
+    padding: 0.2rem;
+    background: white;
+    margin: 0.2rem;
+    grid-template-rows: 3rem 3rem;
+    max-width: 35rem;
+    width: 28rem;
+    grid-template-rows: 2rem 3rem;
+    .producto__img {
+        align-self: center;
+        justify-self: start;
+        grid-area: img;
+        height: 100%;
+        padding: 0 1rem 0 0;
+        object-fit: cover;
+    }
+    .producto__title {
+        grid-area: title;
+        color: black;
+        font-weight: bold;
+        text-align: left;
+        font-size: 1.5rem;
+        padding: .5rem;
+    }
+    .producto__subtitle {
+        grid-area: subtitle;
+        color: black;
+        text-align: left;
+        font-size: 1.3rem;
+        padding: .5rem;
+    }
+    .precio {
+        grid-area: price;
+        &::before {
+            content: "$";
+        }
+    }
+}
+
+#info {
+    background: white;
+    width: 80%;
+    text-align: center;
+    margin: 1.5rem;
+    padding: 1rem;
+    p {
+        font-size: 2rem;
+    }
+}
+
+.btn-container {
+    display: flex;
+    flex-flow: row nowrap;
+    .btn {
+        background: $color-bg;
+        width: 3rem;
+        color: white;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 0.4rem;
+        transition: transform 0.2s;
+        &:hover {
+            transform: scale(105%);
+        }
+    }
+}
+
+.carrito-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}

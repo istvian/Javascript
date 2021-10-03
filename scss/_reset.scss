@@ -18,3 +18,10 @@ body {
     overflow-anchor: none;
     font-size: 10px;
 }
+
+.no_selection {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+}

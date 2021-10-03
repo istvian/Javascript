@@ -17,6 +17,12 @@ body {
   overflow-anchor: none;
   font-size: 10px; }
 
+.no_selection {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none; }
+
 form {
   margin: 2rem 0rem;
   display: flex;
@@ -64,7 +70,7 @@ form {
       text-align: center; }
     .body .nav .nav__subtitle {
       color: #fff;
-      font-size: 1.5rem;
+      font-size: 2rem;
       text-align: center;
       margin: 1rem; }
     .body .nav .nav__links {
@@ -102,3 +108,106 @@ form {
     color: red; }
   .body .text--green {
     color: greenyellow; }
+
+@media (max-width: 500px) {
+  .body .nav {
+    max-width: 100%;
+    width: fit-content;
+    padding: 0.2rem; } }
+
+.producto-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center; }
+  .producto-container .producto {
+    border-radius: 2.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    margin: 0.5rem;
+    background: white; }
+    .producto-container .producto .producto__img {
+      height: 4rem; }
+    .producto-container .producto .producto__title {
+      margin-top: 1rem;
+      color: black;
+      font-weight: bold;
+      text-align: center;
+      font-size: 1.5rem; }
+    .producto-container .producto .producto__subtitle {
+      color: black;
+      text-align: center;
+      font-size: 1.5rem; }
+    .producto-container .producto .precio::before {
+      content: "$"; }
+
+.item {
+  display: grid;
+  grid-template-areas: "img title price" " img subtitle subtitle";
+  padding: 0.2rem;
+  background: white;
+  margin: 0.2rem;
+  grid-template-rows: 3rem 3rem;
+  max-width: 35rem;
+  width: 28rem;
+  grid-template-rows: 2rem 3rem; }
+  .item .producto__img {
+    align-self: center;
+    justify-self: start;
+    grid-area: img;
+    height: 100%;
+    padding: 0 1rem 0 0;
+    object-fit: cover; }
+  .item .producto__title {
+    grid-area: title;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.5rem;
+    padding: .5rem; }
+  .item .producto__subtitle {
+    grid-area: subtitle;
+    color: black;
+    text-align: left;
+    font-size: 1.3rem;
+    padding: .5rem; }
+  .item .precio {
+    grid-area: price; }
+    .item .precio::before {
+      content: "$"; }
+
+#info {
+  background: white;
+  width: 80%;
+  text-align: center;
+  margin: 1.5rem;
+  padding: 1rem; }
+  #info p {
+    font-size: 2rem; }
+
+.btn-container {
+  display: flex;
+  flex-flow: row nowrap; }
+  .btn-container .btn {
+    background: #111;
+    width: 3rem;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0.4rem;
+    transition: transform 0.2s; }
+    .btn-container .btn:hover {
+      transform: scale(105%); }
+
+.carrito-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem; }
