@@ -255,3 +255,29 @@ form {
     height: 100%;
     object-fit: scale-down;
 }
+
+.datos-container {
+    background: $color-bg-hover;
+    width: 80%;
+    font-size: 2rem;
+    padding: 1rem;
+    color: $color-text;
+    .nombre {
+        margin: 0 1rem;
+        &::before {
+            content: "Nombre: ";
+        }
+    }
+    .usuario {
+        margin: 0 1rem;
+        &::before {
+            content: "Usuario: ";
+        }
+    }
+    .email {
+        margin: 0 1rem 2rem 1rem;
+        &::before {
+            content: "Mail: ";
+        }
+    }
+}

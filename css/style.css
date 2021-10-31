@@ -404,4 +404,36 @@ form input {
   -o-object-fit: scale-down;
      object-fit: scale-down;
 }
+
+.datos-container {
+  background: #6e6e6e;
+  width: 80%;
+  font-size: 2rem;
+  padding: 1rem;
+  color: #fff;
+}
+
+.datos-container .nombre {
+  margin: 0 1rem;
+}
+
+.datos-container .nombre::before {
+  content: "Nombre: ";
+}
+
+.datos-container .usuario {
+  margin: 0 1rem;
+}
+
+.datos-container .usuario::before {
+  content: "Usuario: ";
+}
+
+.datos-container .email {
+  margin: 0 1rem 2rem 1rem;
+}
+
+.datos-container .email::before {
+  content: "Mail: ";
+}
 /*# sourceMappingURL=style.css.map */
